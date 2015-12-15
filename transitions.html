@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+
+
+    </script>
+
+    <style>
+
+        div.circle {
+            background-color: #eee;
+            height: 20px;
+            width: 20px;
+            border-radius: 100%;
+
+            position: absolute;
+            right: 20px;
+
+            transition: right 1s linear 500ms, background-color 1000ms ease;
+        }
+
+        .circle.second {
+            top: 100px;
+        }
+
+        .move {
+            right: 450px;
+            transition: right 500ms ease;
+        }
+
+
+        .hover-to-move {
+            transition: background-color 1s ease;
+        }
+
+        .hover-to-move:hover {
+            /*background-color: red;*/
+        }
+
+        .hover-to-move:hover + div.circle {
+            right: 250px;
+            background-color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="hover-to-move">Hover to move</div>
+    <div class="circle"></div>
+    <div class="circle second"></div>
+
+</body>
+</html>
